@@ -27,19 +27,16 @@ if ($stmt->rowCount() > 0) {     // <--- change to $result->...!
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         $payments[]=$row;
     }
-    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        $users[]=$row;
-    }
-    echo json_encode($payments);
+    echo json_encode(array(
+        "payments"=>$payments
+    ));
+    return;
     // create array
 } else {
-    http_response_code(400);
     echo json_encode(array(
-        "status" => false,
-        "message" => "Network Error",
+        "payments" => []
     ));
-}
 
-header('Content-Type: application/json');
+}
 //echo json_encode($user_arr);
 ?>

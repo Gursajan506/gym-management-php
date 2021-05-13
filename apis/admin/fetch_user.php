@@ -13,26 +13,35 @@ if (!$admin_session->isAdminLoggedIn()) {
     header('Content-Type: application/json');
     return;
 }
+if (!isset($_GET['id']) || empty($_GET['id'])) {
+    http_response_code(404);
+    header('Content-Type: application/json');
+    echo json_encode(array(
+        "message" => "Id is required",
+    ));
+    return;
+}
+
 
 // prepare user object
 $user = new User($db);
 
-$stmt = $user->fetchUsers();
+$user->id = number_format(isset($_GET['id']) ? (int)$_GET['id'] : die());
+$stmt = $user->fetchUser();
 
 if ($stmt->rowCount() > 0) {
-    $users=[];
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        $users[]=$row;
+        echo json_encode(array(
+            "user" => $row,
+        ));
+        return;
     }
 
-    echo json_encode(array(
-        "users" => $users,
-    ));
-    return;
+
     // create array
 } else {
-
+    http_response_code(404);
     echo json_encode(array(
-        "users" => [],
+        "message" => "User is not valid"
     ));
 }

@@ -91,6 +91,13 @@ class User{
         $stmt->execute();
         return $stmt;
     }
+    function fetchUser (){
+        $query ="SELECT `id`, `username`, `created` FROM " . $this->table_name ." WHERE id=".$this->id;
+        $stmt = $this->conn->prepare($query);
+            // execute query
+        $stmt->execute();
+        return $stmt;
+    }
     function fetchUsers (){
         $query ="SELECT `id`, `username`, `created` FROM " . $this->table_name ."";
         $stmt = $this->conn->prepare($query);

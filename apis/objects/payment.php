@@ -61,7 +61,7 @@ class Payment{
         return $stmt;
     }
     function deletePayment() {
-        $query = "DELETE FROM " . $this->table_name . " WHERE id='" . $this->id."'";
+        $query = "DELETE FROM " . $this->table_name . " WHERE id=" . $this->id."";
         $stmt = $this->conn->prepare($query);
         // bind value
         $stmt->bindParam(":id", $this->id);
@@ -69,7 +69,7 @@ class Payment{
         return $stmt;
     }
     function fetchPayments (){
-        $query ="SELECT * FROM " . $this->table_name .",users";
+        $query ="SELECT * FROM " . $this->table_name ."";
         $stmt = $this->conn->prepare($query);
             // execute query
         $stmt->execute();

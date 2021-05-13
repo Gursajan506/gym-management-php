@@ -38,7 +38,7 @@ if(!isset($_POST['id']) ||empty($_POST['id'])){
     http_response_code(404);
     header('Content-Type: application/json');
     echo json_encode(array(
-        "message" => "Password is required",
+        "message" => "Id is required",
     ));
     return;
 }

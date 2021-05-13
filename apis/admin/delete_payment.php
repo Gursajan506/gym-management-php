@@ -21,7 +21,7 @@ if(!isset($_POST['id']) ||empty($_POST['id'])){
     http_response_code(404);
     header('Content-Type: application/json');
     echo json_encode(array(
-        "message" => "Id is required",
+        "message" => "id is required",
     ));
     return;
 }
@@ -29,7 +29,8 @@ if(!isset($_POST['id']) ||empty($_POST['id'])){
 $payment = new Payment($db);
  
 // set user property values
-$payment->id = number_format(isset($_POST['id'])? $_POST['id']: die());
+$payment->id =(int) $_POST['id'];
+var_dump($payment->id);
 $stmt = $payment->deletePayment();
 // create the user
 if($stmt->rowCount() > 0){
