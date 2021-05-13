@@ -7,7 +7,7 @@ class Payment{
  
     // object properties
     public $id;
-    public $userId;
+    public $user_id;
     public $amount;
     public $created;
  
@@ -19,18 +19,18 @@ class Payment{
     function createPayment(){
     
         // query to insert record
-        $query = "INSERT INTO " . $this->table_name . " SET userId=:userId, amount=:amount, created=:created";
+        $query = "INSERT INTO " . $this->table_name . " SET user_id=:user_id, amount=:amount, created=:created";
     
         // prepare query
         $stmt = $this->conn->prepare($query);
     
         // sanitize
-        $this->userId=number_format($this->userId);
+        $this->user_id=number_format($this->user_id);
         $this->amount=htmlspecialchars(strip_tags($this->amount));
         $this->created=htmlspecialchars(strip_tags($this->created));
     
         // bind values
-        $stmt->bindParam(":userId", $this->userId);
+        $stmt->bindParam(":user_id", $this->user_id);
         $stmt->bindParam(":amount", $this->amount);
         $stmt->bindParam(":created", $this->created);
     
@@ -45,16 +45,14 @@ class Payment{
     }
     function updatePayment() {
         $query = "UPDATE " . $this->table_name . " 
-            SET userId='".$this->userId. "', amount='" .$this->amount. "', created='".$this->created."' WHERE id='" . $this->id."'";
+            SET amount='" .$this->amount. "', created='".$this->created."' WHERE id='" . $this->id."'";
         $stmt = $this->conn->prepare($query);
-        // sanitize
-        $this->userId=number_format($this->userId);
+
         $this->amount=htmlspecialchars(strip_tags($this->amount));
         $this->created=htmlspecialchars(strip_tags($this->created));
     
         // bind values
-        
-        $stmt->bindParam(":userId", $this->userId);
+
         $stmt->bindParam(":amount", $this->amount);
         $stmt->bindParam(":created", $this->created);
         $stmt->bindParam(":id", $this->id);
@@ -71,7 +69,7 @@ class Payment{
         return $stmt;
     }
     function fetchPayments (){
-        $query ="SELECT * FROM " . $this->table_name ."";
+        $query ="SELECT * FROM " . $this->table_name .",users";
         $stmt = $this->conn->prepare($query);
             // execute query
         $stmt->execute();

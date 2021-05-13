@@ -1,6 +1,8 @@
 <?php
 ob_start();
 session_start();
+
+header('Content-Type: application/json');
 class Database{
  
     // specify your own database credentials

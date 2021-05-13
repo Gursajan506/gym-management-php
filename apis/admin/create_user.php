@@ -5,10 +5,40 @@ include_once '../config/database.php';
  
 // instantiate user object
 include_once '../objects/user.php';
+
+include_once 'AdminSession.php';
  
 $database = new Database();
 $db = $database->getConnection();
- 
+
+
+
+$admin_session=new AdminSession();
+if(!$admin_session->isAdminLoggedIn()){
+    http_response_code(401);
+    header('Content-Type: application/json');
+    return;
+}
+
+
+if(!isset($_POST['username']) ||empty($_POST['username'])){
+    http_response_code(404);
+    header('Content-Type: application/json');
+    echo json_encode(array(
+        "message" => "User name is required",
+    ));
+    return;
+}
+if(!isset($_POST['password']) ||empty($_POST['password'])){
+    http_response_code(404);
+    header('Content-Type: application/json');
+    echo json_encode(array(
+        "message" => "Password is required",
+    ));
+    return;
+}
+
+
 $user = new User($db);
  
 // set user property values

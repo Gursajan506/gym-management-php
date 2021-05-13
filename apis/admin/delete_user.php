@@ -5,10 +5,30 @@ include_once '../config/database.php';
  
 // instantiate user object
 include_once '../objects/user.php';
+
+include_once 'AdminSession.php';
  
 $database = new Database();
 $db = $database->getConnection();
- 
+
+
+
+$admin_session = new AdminSession();
+if (!$admin_session->isAdminLoggedIn()) {
+    http_response_code(401);
+    header('Content-Type: application/json');
+    return;
+}
+
+if(!isset($_POST['id']) ||empty($_POST['id'])){
+    http_response_code(404);
+    header('Content-Type: application/json');
+    echo json_encode(array(
+        "message" => "Id is required",
+    ));
+    return;
+}
+
 $user = new User($db);
  
 // set user property values
@@ -29,7 +49,7 @@ else{
     http_response_code(400);
     $user_arr=array(
         "status" => false,
-        "message" => "user does not Exist",
+        "message" => "Cannot delete user. Payments are linked",
     );
 }
 

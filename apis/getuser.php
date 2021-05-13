@@ -1,17 +1,30 @@
 <?php
-include_once '../config/database.php';
-include_once '../objects/user.php';
+include_once './config/database.php';
+include_once './objects/user.php';
 // get database connection
 $database = new Database();
 $db = $database->getConnection();
 
-
-echo $_SESSION['username'];
 if(!isset($_SESSION['username'])){
     http_response_code(401);
     header('Content-Type: application/json');
     return;
 }
+if(!isset($_SESSION['is_admin'])){
+    http_response_code(401);
+    header('Content-Type: application/json');
+    return;
+}
+if($_SESSION['is_admin']){
+    $user_arr = array(
+        "username" => "Admin",
+        "is_admin" => true,
+    );
+    header('Content-Type: application/json');
+    echo json_encode($user_arr);
+    return;
+}
+
 // prepare user object
 $user = new User($db);
 $user->username = $_SESSION['username'];

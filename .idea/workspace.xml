@@ -10,25 +10,26 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf433527-d420-44fd-9dd7-eac59af3f771" name="Default Changelist" comment="init">
-      <change afterPath="$PROJECT_DIR$/apis/admin/admin_create_payment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/admin/admin_createuser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/admin/admin_delete_payment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/admin/admin_deleteuser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/admin/admin_fetch_payment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/admin/admin_fetch_users.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/admin/admin_login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/admin/admin_signup.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/admin/admin_update_payment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/admin/admin_update_user.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/objects/admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/objects/payment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/user/getuser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/user/login.php" afterDir="false" />
+    <list default="true" id="cf433527-d420-44fd-9dd7-eac59af3f771" name="Default Changelist" comment="customer login fixed">
+      <change afterPath="$PROJECT_DIR$/apis/admin/AdminSession.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/User/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/logout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/User/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/user/signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/admin/admin_create_payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/admin/create_payment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/admin/admin_createuser.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/admin/create_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/admin/admin_delete_payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/admin/delete_payment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/admin/admin_deleteuser.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/admin/delete_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/admin/admin_fetch_payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/admin/fetch_payment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/admin/admin_fetch_users.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/admin/fetch_users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/admin/admin_login.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/admin/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/admin/admin_signup.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/admin/admin_update_payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/admin/update_payment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/admin/admin_update_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/admin/update_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/objects/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/objects/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/objects/payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/objects/payment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apis/objects/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/objects/user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/user/getuser.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/getuser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/user/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/user/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/user/signup.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +72,7 @@
       <workItem from="1620451986791" duration="432000" />
       <workItem from="1620561043388" duration="3134000" />
       <workItem from="1620629259486" duration="2622000" />
-      <workItem from="1620893837768" duration="1140000" />
+      <workItem from="1620893837768" duration="6034000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1620630364936</created>
@@ -80,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620630364936</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="customer login fixed">
+      <created>1620895095037</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1620895095037</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,17 +107,22 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="customer login fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="customer login fixed" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2710" y="243" key="NewPhpClassDialog" timestamp="1620563503749">
+    <state x="2710" y="243" key="NewPhpClassDialog" timestamp="1620895387427">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
-    <state x="2710" y="243" key="NewPhpClassDialog/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1620563503749" />
+    <state x="2710" y="243" key="NewPhpClassDialog/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1620895387427" />
     <state x="2714" y="443" key="NewPhpFileDialog" timestamp="1620563231579">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
     <state x="2714" y="443" key="NewPhpFileDialog/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1620563231579" />
+    <state x="2472" y="240" key="Vcs.Push.Dialog.v2" timestamp="1620895099694">
+      <screen x="1920" y="0" width="1920" height="1030" />
+    </state>
+    <state x="2472" y="240" key="Vcs.Push.Dialog.v2/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1620895099694" />
     <state x="2681" y="426" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1620630353206">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>

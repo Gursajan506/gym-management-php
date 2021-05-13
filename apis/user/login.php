@@ -40,6 +40,7 @@ if($stmt->rowCount() > 0){
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
     // create array
     $_SESSION['username'] = $_POST['username'];
+    $_SESSION['is_admin'] = false;
     $user_arr=array(
         "status" => true,
         "message" => "Successfully Login!",
