@@ -1,43 +1,33 @@
 <?php
 include_once '../cors.php';
 include_once '../config/database.php';
-include_once '../objects/payment.php';
-
+include_once '../objects/DietPlan.php';
 include_once 'AdminSession.php';
-// get database connection
 $database = new Database();
 $db = $database->getConnection();
+
 $admin_session = new AdminSession();
 if (!$admin_session->isAdminLoggedIn()) {
     http_response_code(401);
     return;
 }
+$obj = new DietPlan($db);
 
-// prepare user object
+$stmt = $obj->fetchAll();
 
-
-
-$payment = new Payment($db);
-
-$stmt = $payment->fetchPayments();
-
-
-
-if ($stmt->rowCount() > 0) {     // <--- change to $result->...!
-    $payments=[];
+if ($stmt->rowCount() > 0) {
+    $items = [];
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        $payments[]=$row;
+        $items[] = $row;
     }
+
     echo json_encode(array(
-        "payments"=>$payments
+        "items" => $items,
     ));
     return;
-    // create array
 } else {
-    echo json_encode(array(
-        "payments" => []
-    ));
 
+    echo json_encode(array(
+        "items" => [],
+    ));
 }
-//echo json_encode($user_arr);
-?>

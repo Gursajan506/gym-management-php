@@ -43,6 +43,18 @@ class Payment{
         return false;
         
     }
+    function count (){
+        $query ="SELECT COUNT(id) AS count FROM ".$this->table_name;
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+        if ($stmt->rowCount() > 0) {
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                return $row["count"];
+            }
+
+        }
+        return 0;
+    }
     function updatePayment() {
         $query = "UPDATE " . $this->table_name . " 
             SET amount='" .$this->amount. "', created='".$this->created."' WHERE id='" . $this->id."'";

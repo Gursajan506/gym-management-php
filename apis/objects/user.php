@@ -64,6 +64,18 @@ class User{
         $stmt->execute();
         return $stmt;
     }
+    function count (){
+        $query ="SELECT COUNT(id) AS count FROM ".$this->table_name;
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+        if ($stmt->rowCount() > 0) {
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                return $row["count"];
+            }
+
+        }
+        return 0;
+    }
     function updateUser() {
         $query = "UPDATE " . $this->table_name . " 
             SET username='".$this->username. "', password='" .$this->password. "', created='".$this->created."' WHERE id='" . $this->id."'";

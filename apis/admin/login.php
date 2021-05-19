@@ -1,4 +1,5 @@
 <?php
+include_once '../cors.php';
 // include database and object files
 include_once '../config/database.php';
 include_once '../objects/admin.php';

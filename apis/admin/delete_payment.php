@@ -1,5 +1,5 @@
 <?php
-
+include_once '../cors.php';
 // get database connection
 include_once '../config/database.php';
 
