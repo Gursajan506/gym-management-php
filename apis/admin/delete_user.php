@@ -30,9 +30,8 @@ if(!isset($_POST['id']) ||empty($_POST['id'])){
 }
 
 $user = new User($db);
- 
-// set user property values
-$user->id = number_format(isset($_POST['id'])? (int)$_POST['id']: die());
+
+$user->id =(int) $_POST['id'];
 $stmt = $user->deleteUser();
 // create the user
 if($stmt->rowCount() > 0){
