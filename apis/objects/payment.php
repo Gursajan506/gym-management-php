@@ -75,8 +75,6 @@ class Payment{
     function deletePayment() {
         $query = "DELETE FROM " . $this->table_name . " WHERE id=" . $this->id."";
         $stmt = $this->conn->prepare($query);
-        // bind value
-        $stmt->bindParam(":id", $this->id);
         $stmt->execute();
         return $stmt;
     }

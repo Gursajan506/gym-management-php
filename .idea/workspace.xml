@@ -13,45 +13,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf433527-d420-44fd-9dd7-eac59af3f771" name="Default Changelist" comment="added sql file">
-      <change afterPath="$PROJECT_DIR$/apis/admin/create_diet_plan.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/admin/create_trainer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/admin/create_workout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/admin/dashboard.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/admin/delete_diet_plan.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/admin/delete_trainer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/admin/delete_workout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/admin/fetch_diet_plan.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/admin/fetch_trainer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/admin/fetch_workouts.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/admin/update_diet_plan.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/admin/update_trainer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/admin/update_workout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/admin/view_diet_plan.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/admin/view_trainer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/admin/view_workout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/cors.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/objects/DietPlan.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/objects/Trainer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/objects/Workout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/user/dashboard.php" afterDir="false" />
+    <list default="true" id="cf433527-d420-44fd-9dd7-eac59af3f771" name="Default Changelist" comment="updated delete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/admin/create_payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/admin/create_payment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/admin/create_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/admin/create_user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/admin/delete_payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/admin/delete_payment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/admin/delete_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/admin/delete_user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/admin/fetch_payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/admin/fetch_payment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/admin/fetch_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/admin/fetch_user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/admin/fetch_users.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/admin/fetch_users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/admin/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/admin/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/admin/update_payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/admin/update_payment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/admin/update_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/admin/update_user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/getuser.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/getuser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/logout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/objects/payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/objects/payment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/objects/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/objects/user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/user/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/apis/user/login.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,16 +36,16 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/apis/user" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs" />
       <recent name="C:\xampp\htdocs\apis\user" />
       <recent name="C:\xampp\htdocs\apis\admin" />
       <recent name="C:\xampp\htdocs\apis\objects" />
-      <recent name="C:\xampp\htdocs" />
       <recent name="C:\xampp\htdocs\apis" />
     </key>
   </component>
@@ -103,7 +66,8 @@
       <workItem from="1621000077882" duration="40000" />
       <workItem from="1621404941702" duration="1172000" />
       <workItem from="1621407719743" duration="433000" />
-      <workItem from="1621408661827" duration="7881000" />
+      <workItem from="1621408661827" duration="8651000" />
+      <workItem from="1621702319454" duration="756000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1620630364936</created>
@@ -140,7 +104,28 @@
       <option name="project" value="LOCAL" />
       <updated>1620913790194</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="changed in project">
+      <created>1621417955463</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1621417955463</updated>
+    </task>
+    <task id="LOCAL-00007" summary="changed in project">
+      <created>1621418018726</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1621418018726</updated>
+    </task>
+    <task id="LOCAL-00008" summary="updated delete">
+      <created>1621702408978</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1621702408978</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,7 +149,9 @@
     <MESSAGE value="apis done" />
     <MESSAGE value="int" />
     <MESSAGE value="added sql file" />
-    <option name="LAST_COMMIT_MESSAGE" value="added sql file" />
+    <MESSAGE value="changed in project" />
+    <MESSAGE value="updated delete" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated delete" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2710" y="243" key="NewPhpClassDialog" timestamp="1620895387427">
@@ -175,10 +162,11 @@
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
     <state x="2714" y="443" key="NewPhpFileDialog/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1621414634911" />
-    <state x="2472" y="240" key="Vcs.Push.Dialog.v2" timestamp="1620913792147">
+    <state x="2472" y="240" key="Vcs.Push.Dialog.v2" timestamp="1621702410125">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
-    <state x="2472" y="240" key="Vcs.Push.Dialog.v2/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1620913792147" />
+    <state x="2472" y="240" key="Vcs.Push.Dialog.v2/1920.0.1920.1030/0.0.1536.824@0.0.1536.824" timestamp="1621418021085" />
+    <state x="2472" y="240" key="Vcs.Push.Dialog.v2/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1621702410125" />
     <state x="2587" y="253" width="586" height="534" key="find.popup" timestamp="1621405332371">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>

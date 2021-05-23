@@ -80,7 +80,6 @@ class Trainer{
     function delete() {
         $query = "DELETE FROM " . $this->table_name . " WHERE id='" . $this->id."'";
         $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(":id", $this->id);
         $stmt->execute();
         return $stmt;
     }
